@@ -2,19 +2,23 @@
 using XInputDotNetPure;
 
 public class VirtualController : MonoBehaviour {
-    public InputProcessor inputProcessor;
-    public void Initialize(int i)
-    {
-        inputProcessor = new ProcessXBoxInput(i);
-    }
-	// Use this for initialization
-	void Start () {
-    
+    private InputProcessor inputProcessor;
+    public InputProcessor InputProcessor {
+        get {
+            return inputProcessor;
+        }
+
+        set {
+            inputProcessor = value;
+        }
     }
 
-    // Update is called once per frame
+    public void Initialize(int i)
+    {
+        InputProcessor = new XBox360InputProcessor(i);
+    }
+
     void Update() {
-        inputProcessor.ProcessInput();
-        //print(inputBase.start.state);
+        InputProcessor.ProcessInput();
     }
 }

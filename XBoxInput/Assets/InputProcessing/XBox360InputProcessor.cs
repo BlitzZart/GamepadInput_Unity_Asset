@@ -1,20 +1,20 @@
 ﻿using XInputDotNetPure;
 using System.Collections.Generic;
 
-public class ProcessXBoxInput : InputProcessor
+public class XBox360InputProcessor : InputProcessor
 {
     public List<XBoxToVirtualButton> buttons;
     public List<XBoxToVirtualAxis> axes;
-    private XBox360Input input;
+    private XBox360Mapping input;
 
-    public ProcessXBoxInput(int playerNumber) : base(playerNumber)
+    public XBox360InputProcessor(int playerNumber) : base(playerNumber)
     {
         if (playerNumber < 0)
             playerNumber = 0;
         else if (playerNumber > 3)
             playerNumber = 3;
 
-        input = new XBox360Input(playerNumber);
+        input = new XBox360Mapping(playerNumber);
         buttons = new List<XBoxToVirtualButton>();
         axes = new List<XBoxToVirtualAxis>();
 
@@ -22,14 +22,23 @@ public class ProcessXBoxInput : InputProcessor
         faceRight = new VirtualButton();
         faceUp = new VirtualButton();
         faceDown = new VirtualButton();
+        dPadLeft = new VirtualButton();
+        dPadRight = new VirtualButton();
+        dPadDown = new VirtualButton();
+        dPadUp = new VirtualButton();
         shoulderLeft = new VirtualButton();
         shoulderRight = new VirtualButton();
         start = new VirtualButton();
         back = new VirtualButton();
+
         buttons.Add(new XBoxToVirtualButton(faceLeft, input.buttonX));
         buttons.Add(new XBoxToVirtualButton(faceRight, input.buttonB));
         buttons.Add(new XBoxToVirtualButton(faceUp, input.buttonY));
         buttons.Add(new XBoxToVirtualButton(faceDown, input.buttonA));
+        buttons.Add(new XBoxToVirtualButton(dPadLeft, input.buttonDLeft));
+        buttons.Add(new XBoxToVirtualButton(dPadRight, input.buttonDRight));
+        buttons.Add(new XBoxToVirtualButton(dPadDown, input.buttonDDown));
+        buttons.Add(new XBoxToVirtualButton(dPadUp, input.buttonDUP));
         buttons.Add(new XBoxToVirtualButton(shoulderLeft, input.buttonLB));
         buttons.Add(new XBoxToVirtualButton(shoulderRight, input.buttonRB));
         buttons.Add(new XBoxToVirtualButton(start, input.buttonStart));

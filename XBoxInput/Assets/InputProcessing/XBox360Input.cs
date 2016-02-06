@@ -1,16 +1,17 @@
 ﻿using XInputDotNetPure;
 
-public class XBox360Input {
+public class XBox360Mapping {
     public delegate float SticksDel(float f = 1);
     public SticksDel leftStickY, leftStickX, rightStickX, rightStickY, rightTrigger, leftTrigger;
     public delegate ButtonState ButtonDelegate(bool b = true);
     public ButtonDelegate buttonA, buttonB, buttonX, buttonY,
+        buttonDLeft, buttonDRight, buttonDDown, buttonDUP,
         buttonLB, buttonRB, buttonLT, buttonRT,
         buttonStart, buttonBack;
 
     PlayerIndex playerIndex;
 
-    public XBox360Input(int playerNumber)
+    public XBox360Mapping(int playerNumber)
     {
         playerIndex = (PlayerIndex)playerNumber;
         InitializeXboxController();
@@ -30,6 +31,11 @@ public class XBox360Input {
         buttonB = x => GamePad.GetState(playerIndex).Buttons.B;
         buttonX = x => GamePad.GetState(playerIndex).Buttons.X;
         buttonY = x => GamePad.GetState(playerIndex).Buttons.Y;
+
+        buttonDLeft = x => GamePad.GetState(playerIndex).DPad.Left;
+        buttonDRight = x => GamePad.GetState(playerIndex).DPad.Right;
+        buttonDDown = x => GamePad.GetState(playerIndex).DPad.Down;
+        buttonDUP = x => GamePad.GetState(playerIndex).DPad.Up;
 
         buttonLB = x => GamePad.GetState(playerIndex).Buttons.LeftShoulder;
         buttonRB = x => GamePad.GetState(playerIndex).Buttons.RightShoulder;

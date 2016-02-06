@@ -7,20 +7,20 @@ namespace Controlls {
             controller.Initialize(playerNumber);
         }
         public override bool Jump() {
-            if (controller.inputProcessor.faceDown.state == VirtualButtonState.Down) {
+            if (controller.InputProcessor.faceDown.state == VirtualButtonState.Down) {
                 return true;
             }
             return false;
         }
         public override bool Stomp() {
-            return controller.inputProcessor.faceLeft.state == VirtualButtonState.Hold;
+            return controller.InputProcessor.faceLeft.state == VirtualButtonState.Hold;
         }
         public override bool StartStomp()
         {
-            return controller.inputProcessor.faceLeft.state == VirtualButtonState.Down;
+            return controller.InputProcessor.faceLeft.state == VirtualButtonState.Down;
         }
         public override float Move() {
-            return controller.inputProcessor.leftX.value;
+            return controller.InputProcessor.leftX.value;
         }
     }
 }

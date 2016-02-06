@@ -3,9 +3,9 @@ using System.Collections;
 
 public class XBoxToVirtualAxis {
     private VirtualAxis virtualAxis;
-    private XBox360Input.SticksDel stickDelegate;
+    private XBox360Mapping.SticksDel stickDelegate;
 
-    public XBoxToVirtualAxis(VirtualAxis virtualAxis, XBox360Input.SticksDel stickDelegate)
+    public XBoxToVirtualAxis(VirtualAxis virtualAxis, XBox360Mapping.SticksDel stickDelegate)
     {
         this.virtualAxis = virtualAxis;
         this.stickDelegate = stickDelegate;

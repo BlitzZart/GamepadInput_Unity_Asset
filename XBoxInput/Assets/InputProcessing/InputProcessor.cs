@@ -9,7 +9,11 @@ public abstract class InputProcessor
     }
     private int playerNumber;
     public int PlayerNumber { get { return playerNumber; } }
-    public VirtualButton faceLeft, faceRight, faceDown, faceUp, shoulderLeft, shoulderRight, start, back;
+    public VirtualButton 
+        faceLeft, faceRight, faceDown, faceUp,
+        dPadLeft, dPadRight, dPadDown, dPadUp,
+        shoulderLeft, shoulderRight,
+        start, back;
     public VirtualAxis leftX, leftY, rightX, rightY, leftTrigger, rightTrigger;
     public abstract void ProcessInput();
 }
