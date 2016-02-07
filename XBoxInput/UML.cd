@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="InputProcessing.VirtualController" Collapsed="true">
+    <Position X="3.25" Y="1" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAEAAAAAQEAAAAAAAAAAgAAAAAAAAAgACAAAAA=</HashCode>
+      <FileName>Assets\InputProcessing\VirtualController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="inputProcessor" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="InputProcessing.InputProcessor">
+    <Position X="6.5" Y="1" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>cSZEAGMiRCACEAAgIRkAAAAaAAAAAgAIABGACBAggAA=</HashCode>
+      <FileName>Assets\InputProcessing\InputProcessor.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="mapping" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="buttons" />
+      <Field Name="axes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="XBox360Mapping" Collapsed="true">
+    <Position X="10" Y="5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Assets\InputProcessing\XBox360\XBox360Mapping.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XBox360InputProcessor" Collapsed="true">
+    <Position X="6.5" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAQAACAEAAA=</HashCode>
+      <FileName>Assets\InputProcessing\XBox360\XBox360InputProcessor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Left" Position="0.11" />
+  </Class>
+  <Class Name="InputProcessing.GamePadMapping" Collapsed="true">
+    <Position X="10" Y="3.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>oAEEAAACUAAAEIAAABAAAAAACEAYAgAABACBAAAgAEA=</HashCode>
+      <FileName>Assets\InputProcessing\GamePadMapping.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InputProcessing.DelegateToVirtualButton" Collapsed="true">
+    <Position X="10" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAUAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\InputProcessing\DelegateToVirtualButton.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="virtualButton" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="InputProcessing.DelegateToVirtualAxis" Collapsed="true">
+    <Position X="10" Y="1" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAACAAAAAI=</HashCode>
+      <FileName>Assets\InputProcessing\DelegateToVirtualAxis.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="virtualAxis" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="VirtualButton" Collapsed="true">
+    <Position X="13" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\InputProcessing\VirtualButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VirtualAxis" Collapsed="true">
+    <Position X="13" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\InputProcessing\VirtualAxis.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestInpuEvents" Collapsed="true">
+    <Position X="0.75" Y="1.5" Width="1.5" />
+    <AssociationLine Name="controller" Type="InputProcessing.VirtualController" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.5" Y="1.5" />
+        <Point X="1.5" Y="1.166" />
+        <Point X="3.25" Y="1.166" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAEAAAAAAAAAAQEAABAAAAAAAAgAACA=</HashCode>
+      <FileName>Assets\TestInpuEvents.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="controller" />
+      <Field Name="input" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="InputProcessing.YourGameInputEvents" Collapsed="true">
+    <Position X="3.25" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIQAAAAAAAAAAABEAAAAAAAAAQEAAAAAAAAAAAgAACA=</HashCode>
+      <FileName>Assets\InputProcessing\GameSpecific\YourGameInputEvents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
