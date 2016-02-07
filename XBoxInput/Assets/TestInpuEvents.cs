@@ -21,21 +21,21 @@ public class TestInpuEvents : MonoBehaviour {
 	}
 
     private void OnStopRunning() {
-        //print("Stop");
+        print("Stop");
     }
 
     private void OnRun(float value) {
-        //print("Run: " + value);
+        print("Run: " + value);
     }
 
     private void OnPunch() {
-        //print("Punch");
+        print("Punch");
 
         controller.Vibrate(0.3f, 0.4f, 0.4f);
     }
 
     private void OnJump() {
-        //print("Jump");
+        print("Jump");
     }
 
     void Update() {
