@@ -1,4 +1,7 @@
-﻿namespace InputProcessing {
+﻿using System.Collections.Generic;
+
+namespace InputProcessing {
+
     /// <summary>
     /// maps delegates to actual button and axis states of an abstract gamepad
     /// </summary>

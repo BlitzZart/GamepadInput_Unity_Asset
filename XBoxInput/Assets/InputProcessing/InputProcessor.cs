@@ -17,7 +17,7 @@ namespace InputProcessing {
 
         protected List<DelegateToVirtualButton> buttons;
         protected List<DelegateToVirtualAxis> axes;
-        protected GamePadMapping mapping;
+        public GamePadMapping mapping;
 
         protected VirtualButton faceLeft;
         protected VirtualButton faceRight;

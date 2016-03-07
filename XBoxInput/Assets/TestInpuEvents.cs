@@ -4,15 +4,13 @@ using System;
 
 public class TestInpuEvents : MonoBehaviour {
     VirtualController controller;
-    YourGameInputEvents input;
+    YourGameInput input;
 
 	// Use this for initialization
 	void Start () {
         controller = GetComponent<VirtualController>();
         // Decide which kind of input devies is used here.
-        controller.Initialize(new XBox360InputProcessor(0));
-
-        input = new YourGameInputEvents(controller);
+        input = GetComponent<YourGameInput>();
 
         input.OnJump += OnJump;
         input.OnPunch += OnPunch;
@@ -39,6 +37,6 @@ public class TestInpuEvents : MonoBehaviour {
     }
 
     void Update() {
-        input.Update();
+
     }
 }
